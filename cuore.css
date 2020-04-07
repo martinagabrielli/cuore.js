@@ -1,0 +1,78 @@
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+* .cuore {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+}
+
+* .cuore.stopped .shape {
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+* .cuore .bpm {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  line-height: 350px;
+  z-index: 2;
+}
+
+* .cuore .shape {
+  background: red;
+  width: 100%;
+  height: 100%;
+  -webkit-mask: url(cuore.svg) no-repeat;
+          mask: url(cuore.svg) no-repeat;
+  -webkit-mask-size: 400px;
+          mask-size: 400px;
+}
+
+* .cuore .shape .fill {
+  background: #379FEE;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+/*# sourceMappingURL=cuore.css.map */
