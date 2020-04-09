@@ -8,15 +8,35 @@
     <link rel="stylesheet" href="cuore.css">
 </head>
 <body>
-
-    <div id="place-holder"></div>
+    <div class="container">
+        <div id="place-holder"></div>
+        <h3>BPM</h3>
+        <div class="slidecontainer">
+            <input id="bpm" type="range" min="0" max="250" value="80" class="slider" id="myRange" onchange="updateBPN()">
+        </div>
+        <h3>Oxygen</h3>
+        <div class="slidecontainer">
+            <input id="oxygen" type="range" min="0" max="100" value="50" class="slider" id="myRange" onchange="updateOxygen()">
+        </div>
+    </div>
     
     <script src="cuore.js"></script>
     <script>
          const cuore = new CuoreFactory("place-holder");
-         cuore.BPM = 50
-         cuore.oxygen = "90%"
+
+         let updateBPN = () => {
+            let bpmValue = document.getElementById("bpm").value
+            cuore.BPM = bpmValue
+         }
+
+         let updateOxygen = () => {
+            let oxygenValue = document.getElementById("oxygen").value
+            cuore.oxygen = `${oxygenValue}%`
+         }
+
          cuore.isBeating = true
+         updateBPN()
+         updateOxygen()
     </script>
 </body>
 </html>
