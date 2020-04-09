@@ -28,7 +28,7 @@ const CuoreFactory = function(element) {
             }
             bpm = bpmValue
             bpmElement.textContent = bpmValue
-            if(bpmValue === 0) {
+            if(bpmValue === "0") {
                 shapeElement.style.animation = "none"
             } else {
                 shapeElement.style.animation = `beat ${60 / bpmValue}s infinite`
