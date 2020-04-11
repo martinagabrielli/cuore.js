@@ -12,4 +12,4 @@ The CuoreFactory object has three properties:
 
 - BPM: sets the BPM value;
 - Oxygen: sets the oxygen level;
-- isBeating: determines if the heart is beating with a boolean; the BPM value comes from the user input on the slider: if the BPM value is 0 the heart animation is set to 'none', otherwise the heart beats according to the beat animation;
+- isBeating: determines if the heart is beating with a boolean; the BPM value comes from the user input on the slider: if the BPM value is 0 the heart animation is set to 'none', otherwise the heart beats according to the beat value set to the animation property;
